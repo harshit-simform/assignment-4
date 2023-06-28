@@ -4,49 +4,49 @@
 
 1. `FORCE_COLOR` : The FORCE_COLOR environment variable is used to enable ANSI colorized output. The value may be:
 
-    - `1`, `true`, or the empty string `''` indicate 16-color support,
-    - `2` to indicate 256-color support, or
-    - `3` to indicate 16 million-color support.
+   - `1`, `true`, or the empty string `''` indicate 16-color support,
+   - `2` to indicate 256-color support, or
+   - `3` to indicate 16 million-color support.
 
-    When FORCE_COLOR is used and set to a supported value, both the NO_COLOR, and NODE_DISABLE_COLORS environment variables are ignored.
+   When FORCE_COLOR is used and set to a supported value, both the NO_COLOR, and NODE_DISABLE_COLORS environment variables are ignored.
 
-    Any other value will result in colorized output being disabled.
+   Any other value will result in colorized output being disabled.
 
-    ![FORCE_COLOR variable screenshot](./Assignment4/images/Image1.png)
+   ![FORCE_COLOR variable screenshot](./Assignment4/images/Image1.png)
 
 2. `NODE_DEBUG` : The NODE_DEBUG environment variable is used to print Debug information for **core** modules. The value will be `','`-separated list of core modules.
 
-    ![NODE_DEBUG variable screenshot](./Assignment4/images/Image2.png)
+   ![NODE_DEBUG variable screenshot](./Assignment4/images/Image2.png)
 
 3. `NODE_DEBUG_NATIVE` : This environment variable is same as NODE_DEBUG but it is used to print low level Debug information from C++ modules present in Node.js implementation. The value for this variable will be `','`-separated list of core modules.
 
-    ![NODE_DEBUG_NATIVE variable screenshot](./Assignment4/images/Image3.png)
+   ![NODE_DEBUG_NATIVE variable screenshot](./Assignment4/images/Image3.png)
 
 4. `NODE_DISABLE_COLORS` : This environment variable is used to Disable Colors in Node stdout and REPL.
 
-    ![NODE_DISABLE_COLORS variable screenshot](./Assignment4/images/Image4.png)
+   ![NODE_DISABLE_COLORS variable screenshot](./Assignment4/images/Image4.png)
 
 5. `NODE_EXTRA_CA_CERTS` : This variable can be used to add trusted root certificates to Node.js's certificate store, allowing you to establish secure HTTPS connections to servers that use these certificates.
 
-    ![NODE_EXTRA_CA_CERTS variable screenshot](./Assignment4/images/Image5.png)
+   ![NODE_EXTRA_CA_CERTS variable screenshot](./Assignment4/images/Image5.png)
 
 6. `NODE_NO_WARNINGS` : When set to 1, process warnings are silenced.
 
-    ![NODE_NO_WARNINGS variable screenshot](./Assignment4/images/Image6.png)
+   ![NODE_NO_WARNINGS variable screenshot](./Assignment4/images/Image6.png)
 
 7. `NODE_OPTIONS` : A space-separated list of command-line options. `options...` are interpreted before command-line options, so command-line options will override or compound after anything in `options...` Node.js will exit with an error if an option that is not allowed in the environment is used, such as -p or a script file.
 
-    ![NODE_OPTIONS variable screenshot](./Assignment4/images/Image7.png)
+   ![NODE_OPTIONS variable screenshot](./Assignment4/images/Image7.png)
 
-8. `NODE_PATH` : This environment variable is used to expand the search for modules. By default Node.js looks for modules in  `node_modules/` directory in project root but using this environment variable we can specify other directories that contain modules. The value for this variable will be `':'`-separated list of directories prefixed to the module search path. On Windows, this is a `';'`-separated list instead.
+8. `NODE_PATH` : This environment variable is used to expand the search for modules. By default Node.js looks for modules in `node_modules/` directory in project root but using this environment variable we can specify other directories that contain modules. The value for this variable will be `':'`-separated list of directories prefixed to the module search path. On Windows, this is a `';'`-separated list instead.
 
-    ![NODE_PATH variable screenshot](./Assignment4/images/Image8.png)
+   ![NODE_PATH variable screenshot](./Assignment4/images/Image8.png)
 
-9. `NODE_PENDING_DEPRECATION` : When set to 1, emit pending deprecation warnings. Pending deprecations are generally identical to a runtime deprecation with the notable exception that they are turned off by default and will not be emitted unless either the `--pending-deprecation` command-line flag, or the `NODE_PENDING_DEPRECATION=1` environment variable, is set. Pending deprecations are used to provide a kind of selective *early warning* mechanism that developers may leverage to detect deprecated API usage.
+9. `NODE_PENDING_DEPRECATION` : When set to 1, emit pending deprecation warnings. Pending deprecations are generally identical to a runtime deprecation with the notable exception that they are turned off by default and will not be emitted unless either the `--pending-deprecation` command-line flag, or the `NODE_PENDING_DEPRECATION=1` environment variable, is set. Pending deprecations are used to provide a kind of selective _early warning_ mechanism that developers may leverage to detect deprecated API usage.
 
-    ![NODE_PENDING_DEPRECATION variable screenshot](./Assignment4/images/Image9.png)
+   ![NODE_PENDING_DEPRECATION variable screenshot](./Assignment4/images/Image9.png)
 
-10. `NODE_PENDING_PIPE_INSTANCES` :  Set the number of pending pipe instance handles when the pipe server is waiting for connections. This setting applies to Windows only.
+10. `NODE_PENDING_PIPE_INSTANCES` : Set the number of pending pipe instance handles when the pipe server is waiting for connections. This setting applies to Windows only.
 
     ![NODE_PENDING_PIPE_INSTANCES variable screenshot](./Assignment4/images/Image10.png)
 
@@ -86,11 +86,11 @@
 
     ![OPENSSL_CONF variable screenshot](./Assignment4/images/Image19.png)
 
-20. `SSL_CERT_DIR` : If `--use-openssl-ca` is enabled, this overrides and sets OpenSSL's *directory* containing trusted certificates. Be aware that unless the child environment is explicitly set, this environment variable will be inherited by any child processes, and if they use OpenSSL, it may cause them to trust the same CAs as node.
+20. `SSL_CERT_DIR` : If `--use-openssl-ca` is enabled, this overrides and sets OpenSSL's _directory_ containing trusted certificates. Be aware that unless the child environment is explicitly set, this environment variable will be inherited by any child processes, and if they use OpenSSL, it may cause them to trust the same CAs as node.
 
     ![SSL_CERT_DIR variable screenshot](./Assignment4/images/Image20.png)
 
-21. `SSL_CERT_FILE` : If `--use-openssl-ca` is enabled, this overrides and sets OpenSSL's *file* containing trusted certificates. Be aware that unless the child environment is explicitly set, this environment variable will be inherited by any child processes, and if they use OpenSSL, it may cause them to trust the same CAs as node.
+21. `SSL_CERT_FILE` : If `--use-openssl-ca` is enabled, this overrides and sets OpenSSL's _file_ containing trusted certificates. Be aware that unless the child environment is explicitly set, this environment variable will be inherited by any child processes, and if they use OpenSSL, it may cause them to trust the same CAs as node.
 
     ![SSL_CERT_FILE variable screenshot](./Assignment4/images/Image21.png)
 
@@ -105,19 +105,17 @@
     - asynchronous crypto APIs such as crypto.pbkdf2(), crypto.scrypt(), crypto.randomBytes(), crypto.randomFill(), crypto.generateKeyPair()
     - dns.lookup()
     - all zlib APIs, other than those that are explicitly synchronous
-    
+
     Because libuv's threadpool has a fixed size, it means that if for whatever reason any of these APIs takes a long time, other (seemingly unrelated) APIs that run in libuv's threadpool will experience degraded performance. In order to mitigate this issue, one potential solution is to increase the size of libuv's threadpool by setting the 'UV_THREADPOOL_SIZE' environment variable to a value greater than 4 (its current default value). For more information, see the libuv threadpool documentation.
 
     ![UV_THREADPOOL_SIZE variable screenshot](./Assignment4/images/Image23.png)
-
 
 ### Useful V8 Options
 
 1. `--max-old-space-size` : Sets the max memory size of V8's old memory section. As memory consumption approaches the limit, V8 will spend more time on garbage collection in an effort to free unused memory. On a machine with 2 GiB of memory, consider setting this to 1536 (1.5 GiB) to leave some memory for other uses and avoid swapping.
 
-    ![MAX_OLD_SPACE_SIZE v8 option screenshot](./Assignment4/images/Image24.png)
+   ![MAX_OLD_SPACE_SIZE v8 option screenshot](./images/Image24.png)
 
-2. `--max-semi-space-size` : Sets the maximum semi-space size for V8's scavenge garbage collector in MiB (megabytes). Increasing the max size of a semi-space may improve throughput for Node.js at the cost of more memory consumption. Since the young generation size of the V8 heap is three times the size of the semi-space, an increase of 1 MiB to semi-space applies to each of the three individual semi-spaces and causes the heap size to increase by 3 MiB. The throughput improvement depends on your workload. The default value is *16 MiB* for 64-bit systems and *8 MiB* for 32-bit systems. To get the best configuration for your application, you should try different max-semi-space-size values when running benchmarks for your application.
+2. `--max-semi-space-size` : Sets the maximum semi-space size for V8's scavenge garbage collector in MiB (megabytes). Increasing the max size of a semi-space may improve throughput for Node.js at the cost of more memory consumption. Since the young generation size of the V8 heap is three times the size of the semi-space, an increase of 1 MiB to semi-space applies to each of the three individual semi-spaces and causes the heap size to increase by 3 MiB. The throughput improvement depends on your workload. The default value is _16 MiB_ for 64-bit systems and _8 MiB_ for 32-bit systems. To get the best configuration for your application, you should try different max-semi-space-size values when running benchmarks for your application.
 
-    ![MAX_OLD_SPACE_SIZE v8 option screenshot](./Assignment4/images/Image25.png)
-
+   ![MAX_OLD_SPACE_SIZE v8 option screenshot](./images/Image25.png)
